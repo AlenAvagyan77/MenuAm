@@ -88,11 +88,6 @@ public class OrderFromClosedRestaurantPageFactory extends BasePage {
 
         }
     }
-    public void scrollDown(){
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        //Scroll Down till the bottom of the page
-        js.executeScript("window.scrollBy(0,600)");
-    }
 
     public void clickOnTheAddToCartButton() {
         Helper.waitUntilElementIsDisplayed(driver, addToCartButton, 10);

@@ -40,8 +40,6 @@ public class OrderAnInappropriateProductPageFactory extends BasePage {
     protected WebElement mustGetThisMessage;
     @FindBy(xpath = CONFIRM_BUTTON)
     protected WebElement confirmButton;
-    @FindBy(xpath = DELETE_ALL_PRODUCTS_BUTTON)
-    protected WebElement deleteAllProductsButton;
     @FindBy(xpath = EMPTY_BUTTON)
     protected WebElement emptyButton;
     @FindBy(xpath = GOOD_BUTTON)
@@ -60,6 +58,7 @@ public class OrderAnInappropriateProductPageFactory extends BasePage {
             Helper.waitUntilElementIsDisplayed(driver, deleteItemButton, 5);
             if (deleteItemButton.isDisplayed()) {
                 deleteItemButton.click();
+                Helper.waitUntilElementIsDisplayed(driver, emptyButton, 5);
                 emptyButton.click();
             }
         } catch (Exception e) {
@@ -149,6 +148,8 @@ public class OrderAnInappropriateProductPageFactory extends BasePage {
     public void clickOnDeleteButton() {
         Helper.waitUntilElementIsDisplayed(driver, deleteItemButton, 5);
         deleteItemButton.click();
+        Helper.waitUntilElementIsDisplayed(driver, emptyButton, 5);
+        emptyButton.click();
     }
     public boolean isTrue(){
         if (deleteItemButton.isDisplayed()){

@@ -22,11 +22,10 @@ public class Constants {
     public static final String CONFIRM_BUTTON = "//span[text() = 'Հաստատել']";
     public static final String DELETE_ALL_PRODUCTS_BUTTON = "//a[text() = 'Ջնջել բոլորը']";
     public static final String EMPTY_BUTTON = "//span[text() = 'Դատարկել']";
-    public static final String DELETE_ITEM_BUTTON = "//div[@id=\"content\"]/div/div[2]/div[1]/div/div/div/ul[1]/div/li/div[2]/div[2]/div[2]/button/span[1]";
+    public static final String DELETE_ITEM_BUTTON = "//div[@id=\"content\"]/div/div[1]/a";
     public static final String HOME_PAGE_BUTTON = "//div[@id=\"mg-root\"]/header/div/div/div/div/h1/a";
     public static final String FIRST_PRODUCT_BUTTON = "//h2[text() = 'ՊաՊա Պիցցա']";
     public static final String GET_TEXT_OF_ORDER = "//div[@id=\"mg-root\"]/div/div[2]/div/div/div[2]/div/div/div[1]/div[2]/div[1]/div/div[2]/div[1]/h3";
-    public static final String RESTAURANT_BUTTON = "//h2[text() = 'Դը Գրին Բոքս Արմենիա']";
     public static final String ADD_TO_CART_BUTTON_1 = "//div[@id=\"mg-root\"]/div/div[2]/div/div/div[2]/div/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/div[2]";
     public static final String ORDER_NOW = "//span[text() = \"Պատվիրել հիմա\"]";
     public static final String PAY_IN_PLACE_BUTTON = "//div[@id=\"mg-root\"]/div/div/div/div[2]/div[2]/div/div[4]/div[1]";
@@ -47,5 +46,5 @@ public class Constants {
     public static final String FATHER_PIZZA = "//img[@alt=\"ՊաՊա Պիցցա\"]";
     public static final String CLOSED_RESTAURANTS = "//*[@id=\"mg-root\"]/div/div[2]/div/div/main/div/div[3]/div";
     public static final String TRY_AGAIN_BUTTON = "//span[text() = 'Կրկին փորձեք']";
-    public static final String ADD_TO_CART_BUTTON_3 = "//*[@id=\"mg-root\"]/div/div[2]/div/div/div[2]/div/div/div[4]/div[2]/div[1]/div/div[2]/div[2]/div[2]";
+    public static final String ADD_TO_CART_BUTTON_3 = "//*[@id=\"mg-root\"]/div/div[2]/div/div/div[2]/div/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/div[2]";
 }

@@ -11,7 +11,6 @@ import pageFactories.HomePageFactory;
 import pageFactories.OrderAnInappropriateProductPageFactory;
 import pageFactories.OrderFromClosedRestaurantPageFactory;
 import pageFactories.SignInPageFactory;
-import utils.Helper;
 
 import java.util.logging.Logger;
 
@@ -53,7 +52,6 @@ public class CartFunctionalityTest{
         orderAnInappropriateProduct.clickOnTheBasketButtonOne();
         Thread.sleep(2000);
         orderAnInappropriateProduct.deleteAllProducts();
-        orderAnInappropriateProduct.deleteAllProducts();
         Thread.sleep(2000);
         orderAnInappropriateProduct.clickOnTheSavedAddress();
         orderAnInappropriateProduct.clickOnTheMyAddressButton();
@@ -89,7 +87,6 @@ public class CartFunctionalityTest{
         orderFromClosedRestaurant.clickOnTheConfirmButton();
         orderFromClosedRestaurant.clickOnTheRestaurantButton();
         Thread.sleep(2000);
-        orderFromClosedRestaurant.scrollDown();
         orderFromClosedRestaurant.clickOnTheAddToCartButton();
         orderFromClosedRestaurant.clickOnTheBasketButton();
         Thread.sleep(3000);
