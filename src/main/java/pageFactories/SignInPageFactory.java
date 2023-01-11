@@ -26,6 +26,7 @@ public class SignInPageFactory extends BasePage {
     @FindBy(xpath = SEARCH_FIELD)
     protected WebElement searchField;
 
+
     public void clickOnTheRegisterButton() {
         registerButton.click();
     }
@@ -39,6 +40,7 @@ public class SignInPageFactory extends BasePage {
         passwordField.click();
         passwordField.sendKeys(password, Keys.ENTER);
         LOGGER.info(" --- LogIn was successful ---");
+        LOGGER.info("dsdsdsdsds");
     }
 
     public boolean isTrue(){
