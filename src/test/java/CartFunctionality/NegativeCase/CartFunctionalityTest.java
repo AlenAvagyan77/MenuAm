@@ -61,7 +61,6 @@ public class CartFunctionalityTest{
         orderAnInappropriateProduct.scrollUp();
         orderAnInappropriateProduct.clickOnTheAddToCartButton();
         Thread.sleep(2000);
-//        orderAnInappropriateProduct.clickOnTheAddToShoppingCartButton();
         Thread.sleep(2000);
         orderAnInappropriateProduct.waitUntilTheProductAddedToCart();
         Thread.sleep(2000);

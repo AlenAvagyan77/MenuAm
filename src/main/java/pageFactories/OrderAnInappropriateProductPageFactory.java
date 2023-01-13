@@ -67,16 +67,6 @@ public class OrderAnInappropriateProductPageFactory extends BasePage {
         }
     }
 
-    public void theWayOfTest(){
-        try {
-            Helper.waitUntilElementIsDisplayed(driver, deleteItemButton, 5);
-            if (tryAgainButton.isDisplayed()) {
-                tryAgainButton.click();
-            }
-        } catch (Exception e) {
-
-        }
-    }
     public void clickOnTheSavedAddress() {
         Helper.waitUntilElementIsDisplayed(driver, savedAddresses, 10);
         savedAddresses.click();
@@ -118,14 +108,6 @@ public class OrderAnInappropriateProductPageFactory extends BasePage {
         }
     }
 
-    public void clickOnTheAddToShoppingCartButton() {
-        try {
-            Helper.waitUntilElementIsDisplayed(driver, addToShoppingCartButton, 7);
-            addToShoppingCartButton.click();
-        } catch (Exception e) {
-
-        }
-    }
 
     public void waitUntilTheProductAddedToCart() {
         Helper.waitUntilElementIsDisplayed(driver, waitUntilTheProductAddedToCart, 10);
