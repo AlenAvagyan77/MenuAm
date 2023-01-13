@@ -58,9 +58,10 @@ public class CartFunctionalityTest{
         orderAnInappropriateProduct.clickOnTheConfirmButton();
         orderAnInappropriateProduct.clickOnTheRestaurantForOrderButton();
         Thread.sleep(2000);
+        orderAnInappropriateProduct.scrollUp();
         orderAnInappropriateProduct.clickOnTheAddToCartButton();
         Thread.sleep(2000);
-        orderAnInappropriateProduct.clickOnTheAddToShoppingCartButton();
+//        orderAnInappropriateProduct.clickOnTheAddToShoppingCartButton();
         Thread.sleep(2000);
         orderAnInappropriateProduct.waitUntilTheProductAddedToCart();
         Thread.sleep(2000);
@@ -91,6 +92,7 @@ public class CartFunctionalityTest{
         orderFromClosedRestaurant.clickOnTheBasketButton();
         Thread.sleep(3000);
         orderFromClosedRestaurant.clickOnTheOrderNow();
+        orderFromClosedRestaurant.scrollUp();
         orderFromClosedRestaurant.clickOnThePayInPlaceButton();
         orderFromClosedRestaurant.clickOnTheOrderButton();
         orderFromClosedRestaurant.getTextOfMessage();

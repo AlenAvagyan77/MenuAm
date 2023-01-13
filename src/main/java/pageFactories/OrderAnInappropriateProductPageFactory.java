@@ -1,6 +1,7 @@
 package pageFactories;
 
 import org.apache.commons.compress.archivers.zip.X000A_NTFS;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -96,8 +97,13 @@ public class OrderAnInappropriateProductPageFactory extends BasePage {
     }
 
     public void clickOnTheRestaurantForOrderButton() {
-        Helper.waitUntilElementIsDisplayed(driver, restaurantForOrderButton, 5);
+        Helper.waitUntilElementIsDisplayed(driver, restaurantForOrderButton, 10);
         restaurantForOrderButton.click();
+    }
+    public void scrollUp(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        //Scroll down till the bottom of the page
+        js.executeScript("window.scrollBy(0,-600)");
     }
 
     public void clickOnTheAddToCartButton() {
@@ -105,7 +111,7 @@ public class OrderAnInappropriateProductPageFactory extends BasePage {
             int itemPrice = Integer.parseInt(listOfItem.get(i).getText());
             LOGGER.info("Product price is a " + itemPrice);
             if (itemPrice < 2000) {
-                Helper.waitUntilElementIsDisplayed(driver, addToCartButton, 5);
+                Helper.waitUntilElementIsDisplayed(driver, addToCartButton, 10);
                 addToCartButton.click();
                 break;
             }

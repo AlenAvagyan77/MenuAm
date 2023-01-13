@@ -104,6 +104,12 @@ public class OrderFromClosedRestaurantPageFactory extends BasePage {
         orderNow.click();
     }
 
+    public void scrollUp(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        //Scroll down till the bottom of the page
+        js.executeScript("window.scrollBy(0,-600)");
+    }
+
     public void clickOnThePayInPlaceButton() {
         Helper.waitUntilElementIsDisplayed(driver, payInPlaceButton, 10);
         payInPlaceButton.click();

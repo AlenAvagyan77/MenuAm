@@ -11,7 +11,7 @@ public class Constants {
     public static final String GOOD_BUTTON = "//span[text() = 'Լավ']";
     public static final String SAVED_ADDRESS = "//div[text()='Պահպանված հասցեներ']";
     public static final String MY_ADDRESS_BUTTON = "//span[text() = 'Կոմիտասի պողոտա, 60/2']";
-    public static final String RESTAURANT_FOR_ORDER_BUTTON = "//h2[text() = \"Բլին XXL\"]";
+    public static final String RESTAURANT_FOR_ORDER_BUTTON = "//h2[text() = \"Փարաքարի շաուրմա և Թուրինգյան բրաթվուրստ\"]";
     public static final String BASKET_BUTTON = "//div[@data-id=\"basket\"]";
     public static final String ADD_TO_CART_BUTTON = "//div[@id=\"mg-root\"]/div/div[2]/div/div/div[2]/div/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/div[2]";
     public static final String LIST_OF_ITEM = "//span[@data-id=\"amount\"]";
