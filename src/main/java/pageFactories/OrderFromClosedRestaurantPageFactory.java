@@ -48,6 +48,8 @@ public class OrderFromClosedRestaurantPageFactory extends BasePage {
     protected WebElement myAddressButton;
     @FindBy(xpath = CONFIRM_BUTTON)
     protected WebElement confirmButton;
+    @FindBy(xpath = PLUS_BUTTON)
+    protected WebElement plusButton;
 
     public void clickOnTheSavedAddress() {
         Helper.waitUntilElementIsDisplayed(driver, savedAddresses,10);
@@ -90,13 +92,24 @@ public class OrderFromClosedRestaurantPageFactory extends BasePage {
     }
 
     public void clickOnTheAddToCartButton() {
-        Helper.waitUntilElementIsDisplayed(driver, addToCartButton, 10);
-        addToCartButton.click();
+        try {
+            Helper.waitUntilElementIsDisplayed(driver, addToCartButton, 10);
+            addToCartButton.click();
+        } catch (Exception e) {
+            JavascriptExecutor executor = (JavascriptExecutor) driver;
+            executor.executeScript("arguments[0].click();", addToCartButton);
+        }
     }
 
     public void clickOnTheBasketButton() {
         Helper.waitUntilElementIsDisplayed(driver, basketButton, 5);
         basketButton.click();
+    }
+
+    public void clickOnThePLusButton(){
+        Helper.waitUntilElementIsDisplayed(driver, plusButton, 5);
+        plusButton.click();
+
     }
 
     public void clickOnTheOrderNow() {

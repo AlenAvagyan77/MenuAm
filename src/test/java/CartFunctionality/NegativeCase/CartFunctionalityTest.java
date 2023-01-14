@@ -89,6 +89,7 @@ public class CartFunctionalityTest{
         Thread.sleep(2000);
         orderFromClosedRestaurant.clickOnTheAddToCartButton();
         orderFromClosedRestaurant.clickOnTheBasketButton();
+        orderFromClosedRestaurant.clickOnThePLusButton();
         Thread.sleep(3000);
         orderFromClosedRestaurant.clickOnTheOrderNow();
         orderFromClosedRestaurant.scrollUp();

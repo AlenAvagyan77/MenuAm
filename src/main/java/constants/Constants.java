@@ -35,6 +35,7 @@ public class Constants {
     public static final String FIRST_PRODUCT = "//h2[text() = 'Մուչաչո']";
     public static final String ADD_TO_CART_BUTTON_2 = "//div[@id=\"mg-root\"]/div/div[2]/div/div/div[2]/div/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/div[2]";
     public static final String MINUS_BUTTON = "//div[@data-id=\"quantity\"]/button[1]";
+    public static final String PLUS_BUTTON = "//*[@id=\"content\"]/div/div[2]/div[1]/div/div/div/ul/div/li/div[2]/div[2]/div[2]/div/button[2]";
     public static final String QUIT_FROM_CART_BUTTON = "//span[@data-id=\"closeIcon\"]";
     public static final String DIGIT_OF_PRICE = "//div[@id=\"content\"]/div/div[3]/div[3]/div[2]/div";
     public static final String NAME_OF_PRICE = "//div[@id=\"content\"]/div/div[3]/div[3]/div[2]/span";
