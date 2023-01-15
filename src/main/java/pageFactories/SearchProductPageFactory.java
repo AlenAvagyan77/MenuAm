@@ -27,7 +27,6 @@ public class SearchProductPageFactory extends BasePage {
 
 
     public void clickOnTheSearchField(String enterFoodName) {
-        LOGGER.info(" --- Verify the user can search any product. ---");
         searchField.click();
         searchField.sendKeys(enterFoodName);
         LOGGER.info("The user has searched." + enterFoodName);

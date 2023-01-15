@@ -1,5 +1,6 @@
 package pageFactories;
 
+import constants.Messages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import java.util.logging.Logger;
 
 import static constants.Constants.*;
-import static constants.ErrorMessages.INCORRECT_PAGE_WAS_OPENED;
+import constants.Messages.*;
 
 public class HomePageFactory extends BasePage {
     public HomePageFactory(WebDriver driver) {
@@ -26,7 +27,7 @@ public class HomePageFactory extends BasePage {
 
     public void verifyTheUserIsInCorrectPage() {
         if (!registerButton.isDisplayed()) {
-            LOGGER.warning(INCORRECT_PAGE_WAS_OPENED);
+            LOGGER.warning(Messages.INCORRECT_PAGE_WAS_OPENED);
             driver.quit();
         }
     }

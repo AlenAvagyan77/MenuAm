@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pageFactories.*;
-
+import constants.*;
 import java.util.logging.Logger;
 
 
@@ -31,11 +31,11 @@ public class CartFunctionalityTest {
         homePageFactory.openHomePage();
         homePageFactory.verifyTheUserIsInCorrectPage();
         Assert.assertEquals(homePageFactory.actualTitle(), homePageFactory.expectedTitle());
-        LOGGER.info("--- Opened the correct MenuAm page ---");
+        LOGGER.info(Messages.OPENED_THE_CORRECT_MENU_AM_PAGE);
         SignInPageFactory page_1_signIn = new SignInPageFactory(DriverFactory.getDriver());
         page_1_signIn.clickOnTheRegisterButton();
-        page_1_signIn.clickOnTheEmailFieldAndEnterName("alen_avagyan_03@mail.ru");
-        page_1_signIn.clickOnThePasswordFieldAndEnterPassword("043444255");
+        page_1_signIn.clickOnTheEmailFieldAndEnterName(Data.EMAIL);
+        page_1_signIn.clickOnThePasswordFieldAndEnterPassword(Data.PASSWORD);
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(page_1_signIn.isTrue());
         softAssert.assertAll();
@@ -44,7 +44,8 @@ public class CartFunctionalityTest {
     @Test(priority = 2)
     public void SearchField() {
         SearchProductPageFactory searchProductPageFactory = new SearchProductPageFactory(DriverFactory.getDriver());
-        searchProductPageFactory.clickOnTheSearchField("ՊաՊա Պիցցա");
+        LOGGER.info(Messages.TEST_ONE);
+        searchProductPageFactory.clickOnTheSearchField(Data.FOOD_NAME);
         searchProductPageFactory.clickOnTheSubmitButton();
         searchProductPageFactory.waitForPageLoaded();
         SoftAssert softAssert = new SoftAssert();
@@ -74,7 +75,7 @@ public class CartFunctionalityTest {
         ProductQuantityFactory productQuantity = new ProductQuantityFactory(DriverFactory.getDriver());
         productQuantity.clickOnTheHomePageButton();
         int firstQuantity = productQuantity.getQuantityTextOfShoppingCart();
-        LOGGER.info("--- Verify the quantity of the product increases when Adding one item to the cart. --- ");
+        LOGGER.info( Messages.TEST_TWO);
         LOGGER.info("There was " + firstQuantity + " product in the card.");
         productQuantity.clickOnTheFirstProduct();
         productQuantity.clickOnAddToCartButton();
@@ -92,7 +93,7 @@ public class CartFunctionalityTest {
                 DriverFactory.getDriver());
         decreasedOneProductFromTheCart.clickOnTheHomePageButton();
         int firstQuantity = decreasedOneProductFromTheCart.getQuantityTextOfShoppingCart();
-        LOGGER.info("--- Verify quantity has decreased when removing one product from the cart. --- ");
+        LOGGER.info(Messages.TEST_TREE);
         LOGGER.info("There was " + firstQuantity + " product in the card.");
         decreasedOneProductFromTheCart.clickOnTheBasketButton();
         Thread.sleep(3000);
@@ -113,7 +114,7 @@ public class CartFunctionalityTest {
         totalPriceOfOrder.clickOnTheBasketButton();
         Thread.sleep(2000);
         String firstTotalPrice = totalPriceOfOrder.getTextFromTotalPriceOfOrder();
-        LOGGER.info(" --- Verify the total price has been added after adding the item to the cart. ---");
+        LOGGER.info(Messages.TEST_FOUR);
         LOGGER.info("Initial price : " + firstTotalPrice);
         totalPriceOfOrder.clickOnTheQuiteFromCartButton();
         totalPriceOfOrder.clickOnTheCaucasusInnButton();

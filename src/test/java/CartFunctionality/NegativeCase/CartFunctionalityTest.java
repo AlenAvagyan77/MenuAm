@@ -11,7 +11,8 @@ import pageFactories.HomePageFactory;
 import pageFactories.OrderAnInappropriateProductPageFactory;
 import pageFactories.OrderFromClosedRestaurantPageFactory;
 import pageFactories.SignInPageFactory;
-
+import constants.*;
+import constants.Messages.*;
 import java.util.logging.Logger;
 
 public class CartFunctionalityTest{
@@ -33,11 +34,11 @@ public class CartFunctionalityTest{
         homePageFactory.openHomePage();
         homePageFactory.verifyTheUserIsInCorrectPage();
         Assert.assertEquals(homePageFactory.actualTitle(), homePageFactory.expectedTitle());
-        LOGGER.info("--- Opened the correct MenuAm page ---");
+        LOGGER.info(Messages.OPENED_THE_CORRECT_MENU_AM_PAGE);
         SignInPageFactory page_1_signIn = new SignInPageFactory(DriverFactory.getDriver());
         page_1_signIn.clickOnTheRegisterButton();
-        page_1_signIn.clickOnTheEmailFieldAndEnterName("alen_avagyan_03@mail.ru");
-        page_1_signIn.clickOnThePasswordFieldAndEnterPassword("043444255");
+        page_1_signIn.clickOnTheEmailFieldAndEnterName(Data.EMAIL);
+        page_1_signIn.clickOnThePasswordFieldAndEnterPassword(Data.PASSWORD);
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(page_1_signIn.isTrue());
         softAssert.assertAll();
@@ -48,7 +49,7 @@ public class CartFunctionalityTest{
     public void OrderAnInappropriateProduct() throws InterruptedException {
         OrderAnInappropriateProductPageFactory orderAnInappropriateProduct = new
                 OrderAnInappropriateProductPageFactory(DriverFactory.getDriver());
-        LOGGER.info(" --- Verify the user can order a product with an inappropriate price. --- ");
+        LOGGER.info(Messages.Messages1.TEST_ONE);
         orderAnInappropriateProduct.clickOnTheBasketButtonOne();
         Thread.sleep(2000);
         orderAnInappropriateProduct.deleteAllProducts();
@@ -80,7 +81,7 @@ public class CartFunctionalityTest{
     public void OrderFromClosedRestaurant() throws InterruptedException {
         OrderFromClosedRestaurantPageFactory orderFromClosedRestaurant =
                 new OrderFromClosedRestaurantPageFactory(DriverFactory.getDriver());
-        LOGGER.info(" --- Verify the user can order any item from the closed restaurant. ---");
+        LOGGER.info(Messages.Messages1.TEST_TWO);
         orderFromClosedRestaurant.clickOnTheHomePageButton();
         orderFromClosedRestaurant.clickOnTheSavedAddress();
         orderFromClosedRestaurant.clickOnTheMyAddressButton();
