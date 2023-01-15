@@ -42,7 +42,7 @@ public class CartFunctionalityTest {
     }
 
     @Test(priority = 2)
-    public void SearchField() {
+    public void SearchFunctionality() {
         SearchProductPageFactory searchProductPageFactory = new SearchProductPageFactory(DriverFactory.getDriver());
         LOGGER.info(Messages.TEST_ONE);
         searchProductPageFactory.clickOnTheSearchField(Data.FOOD_NAME);
