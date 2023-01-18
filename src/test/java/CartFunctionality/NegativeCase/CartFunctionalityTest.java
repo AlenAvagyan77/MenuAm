@@ -37,7 +37,7 @@ public class CartFunctionalityTest{
         LOGGER.info(Messages.OPENED_THE_CORRECT_MENU_AM_PAGE);
         SignInPageFactory page_1_signIn = new SignInPageFactory(DriverFactory.getDriver());
         page_1_signIn.clickOnTheRegisterButton();
-        page_1_signIn.clickOnTheEmailFieldAndEnterName(Data.EMAIL);
+        page_1_signIn.clickOnTheEmailFieldAndEnterEmail(Data.EMAIL);
         page_1_signIn.clickOnThePasswordFieldAndEnterPassword(Data.PASSWORD);
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(page_1_signIn.isTrue());

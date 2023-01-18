@@ -31,7 +31,7 @@ public class SignInPageFactory extends BasePage {
         registerButton.click();
     }
 
-    public void clickOnTheEmailFieldAndEnterName(String enterEmail){
+    public void clickOnTheEmailFieldAndEnterEmail(String enterEmail){
         emailField.click();
         emailField.sendKeys(enterEmail);
     }
