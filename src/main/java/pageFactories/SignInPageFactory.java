@@ -17,6 +17,8 @@ public class SignInPageFactory extends BasePage {
         super(driver);
     }
 
+    @FindBy(id = PHONE_BUTTON)
+    protected WebElement phoneButton;
     @FindBy(className = REGISTER_BUTTON)
     protected WebElement registerButton;
     @FindBy(xpath = EMAIL_FIELD)
@@ -30,7 +32,9 @@ public class SignInPageFactory extends BasePage {
     public void clickOnTheRegisterButton() {
         registerButton.click();
     }
-
+    public void clickOnThePhoneButton(){
+        phoneButton.click();
+    }
     public void clickOnTheEmailFieldAndEnterEmail(String enterEmail){
         emailField.click();
         emailField.sendKeys(enterEmail);

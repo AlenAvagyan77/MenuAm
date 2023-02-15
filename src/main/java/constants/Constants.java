@@ -5,7 +5,8 @@ public class Constants {
     public static final String HOME_PAGE_EXPECTED_TITLE = "Պատվիրել Շուրջօրյա Սննդի Առաքում Ռեստորաններից - Menu.am";
 
     //    Locators
-    public static final String EMAIL_FIELD = "//input[@name='user']";
+    public static final String PHONE_BUTTON = "green-bg";
+    public static final String EMAIL_FIELD = "//div[@id=\"__next\"]/div/div/div[1]/div[2]/div[2]/form/div[1]/div[2]/input";
     public static final String PASSWORD_FIELD = "//input[@type='password']";
     public static final String REGISTER_BUTTON = "MuiButton-label";
     public static final String GOOD_BUTTON = "//span[text() = 'Լավ']";
