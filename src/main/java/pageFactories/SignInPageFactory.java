@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.logging.Logger;
-import utils.*;
+
 import static constants.Constants.*;
 
 public class SignInPageFactory extends BasePage {
