@@ -18,12 +18,12 @@ public class LoginFunctionalityTest {
 
     private static final Logger LOGGER = Logger.getLogger(CartFunctionalityTest.class.getName());
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void initDriver() {
         CartFunctionality.BaseTest.initDriver();
     }
 
-    @AfterTest
+    @AfterTest(alwaysRun = true)
     public void tearDown() {
         CartFunctionality.BaseTest.tearDown(DriverFactory.getDriver());
     }

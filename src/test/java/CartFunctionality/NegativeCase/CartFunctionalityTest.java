@@ -20,17 +20,17 @@ import java.util.logging.Logger;
 public class CartFunctionalityTest{
     private static final Logger LOGGER = Logger.getLogger(CartFunctionality.PositiveCase.CartFunctionalityTest.class.getName());
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void initDriver() {
         BaseTest.initDriver();
     }
 
-    @AfterTest
+    @AfterTest(alwaysRun = true)
     public void tearDown() {
         BaseTest.tearDown(DriverFactory.getDriver());
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = {"1"})
     public void SignInForMenuAm() throws InterruptedException {
         HomePageFactory homePageFactory = new HomePageFactory(DriverFactory.getDriver());
         homePageFactory.openHomePage();
@@ -48,7 +48,7 @@ public class CartFunctionalityTest{
 
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = {"1"})
     public void OrderAnInappropriateProduct() throws InterruptedException {
         OrderAnInappropriateProductPageFactory orderAnInappropriateProduct = new
                 OrderAnInappropriateProductPageFactory(DriverFactory.getDriver());
@@ -80,7 +80,7 @@ public class CartFunctionalityTest{
         softAssert.assertAll();
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3, groups = {"1"})
     public void OrderFromClosedRestaurant() throws InterruptedException {
         OrderFromClosedRestaurantPageFactory orderFromClosedRestaurant =
                 new OrderFromClosedRestaurantPageFactory(DriverFactory.getDriver());
