@@ -1,6 +1,8 @@
 package CartFunctionality.NegativeCase;
 
 import CartFunctionality.BaseTest;
+import constants.Data;
+import constants.Messages;
 import driver.DriverFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -11,9 +13,9 @@ import pageFactories.HomePageFactory;
 import pageFactories.OrderAnInappropriateProductPageFactory;
 import pageFactories.OrderFromClosedRestaurantPageFactory;
 import pageFactories.SignInPageFactory;
-import constants.*;
-import constants.Messages.*;
+
 import java.util.logging.Logger;
+
 
 public class CartFunctionalityTest{
     private static final Logger LOGGER = Logger.getLogger(CartFunctionality.PositiveCase.CartFunctionalityTest.class.getName());
@@ -38,8 +40,8 @@ public class CartFunctionalityTest{
         SignInPageFactory page_1_signIn = new SignInPageFactory(DriverFactory.getDriver());
         page_1_signIn.clickOnTheRegisterButton();
         page_1_signIn.clickOnThePhoneButton();
-        page_1_signIn.clickOnTheEmailFieldAndEnterEmail(Data.EMAIL);
-        page_1_signIn.clickOnThePasswordFieldAndEnterPassword(Data.PASSWORD);
+        page_1_signIn.clickOnTheEmailFieldAndEnterEmail(Data.VALID_EMAIL);
+        page_1_signIn.clickOnThePasswordFieldAndEnterPassword(Data.VALID_PASSWORD);
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(page_1_signIn.isTrue());
         softAssert.assertAll();
