@@ -49,7 +49,7 @@ public class CartFunctionalityTest{
 
     }
 
-    @Test(priority = 2, groups = {"1"})
+    @Test(priority = 2, groups = {"General"})
     public void OrderAnInappropriateProduct() throws InterruptedException {
         OrderAnInappropriateProductPageFactory orderAnInappropriateProduct = new
                 OrderAnInappropriateProductPageFactory(DriverFactory.getDriver());
@@ -81,7 +81,7 @@ public class CartFunctionalityTest{
         softAssert.assertAll();
     }
 
-    @Test(priority = 3, groups = {"1"})
+    @Test(priority = 3, groups = {"General"})
     public void OrderFromClosedRestaurant() throws InterruptedException {
         OrderFromClosedRestaurantPageFactory orderFromClosedRestaurant =
                 new OrderFromClosedRestaurantPageFactory(DriverFactory.getDriver());
