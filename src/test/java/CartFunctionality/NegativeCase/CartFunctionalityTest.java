@@ -25,6 +25,7 @@ public class CartFunctionalityTest{
         BaseTest.initDriver();
     }
 
+
     @AfterTest(alwaysRun = true)
     public void tearDown() {
         BaseTest.tearDown(DriverFactory.getDriver());
