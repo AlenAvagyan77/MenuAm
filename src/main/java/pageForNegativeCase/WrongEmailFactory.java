@@ -45,12 +45,12 @@ public class WrongEmailFactory extends BasePage {
         passwordField.click();
         passwordField.sendKeys(password, Keys.ENTER);
     }
-    public String actualTitle(){
+    public String actualText(){
         Helper.waitUntilElementIsDisplayed(driver, firstText, 5);
         return firstText.getText();
     }
 
-    public String expectedTitle(){ return FIRST_TITLE;};
+    public String expectedText(){ return FIRST_TEXT;};
 
 
 

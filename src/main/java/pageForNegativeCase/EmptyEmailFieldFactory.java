@@ -40,11 +40,11 @@ public class EmptyEmailFieldFactory extends BasePage {
     }
 
 
-    public String expectedTitle() {
-        return SECOND_TITLE;
+    public String expectedText() {
+        return SECOND_TEXT;
     }
 
-    public String actualTitle() {
+    public String actualText() {
         Helper.waitUntilElementIsDisplayed(driver, secondText, 5);
         return secondText.getText();
     }

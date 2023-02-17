@@ -8,7 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import java.util.logging.Logger;
 
 import static constants.Constants.*;
-import constants.Messages.*;
 
 public class HomePageFactory extends BasePage {
     public HomePageFactory(WebDriver driver) {
@@ -32,11 +31,11 @@ public class HomePageFactory extends BasePage {
         }
     }
     
-    public String actualTitle() {
+    public String actualText() {
         return driver.getTitle();
     }
 
-    public String expectedTitle() {
-        return HOME_PAGE_EXPECTED_TITLE;
+    public String expectedText() {
+        return HOME_PAGE_EXPECTED_TEXT;
     }
 }

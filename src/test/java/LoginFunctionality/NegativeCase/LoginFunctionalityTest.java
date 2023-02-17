@@ -34,7 +34,7 @@ public class LoginFunctionalityTest {
         HomePageFactory homePageFactory = new HomePageFactory(DriverFactory.getDriver());
         homePageFactory.openHomePage();
         homePageFactory.verifyTheUserIsInCorrectPage();
-        Assert.assertEquals(homePageFactory.actualTitle(), homePageFactory.expectedTitle());
+        Assert.assertEquals(homePageFactory.actualText(), homePageFactory.expectedText());
         LOGGER.info(Messages.OPENED_THE_CORRECT_MENU_AM_PAGE);
 
     }
@@ -48,7 +48,7 @@ public class LoginFunctionalityTest {
         wrongEmail.clickOnThePasswordFieldAndEnterPassword(Data.VALID_PASSWORD);
         Thread.sleep(2000);
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(wrongEmail.actualTitle(), wrongEmail.expectedTitle());
+        softAssert.assertEquals(wrongEmail.actualText(), wrongEmail.expectedText());
         softAssert.assertAll();
     }
 
@@ -61,7 +61,7 @@ public class LoginFunctionalityTest {
         Thread.sleep(2000);
         emptyEmailField.clickOnAccessButton();
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(emptyEmailField.actualTitle(), emptyEmailField.expectedTitle());
+        softAssert.assertEquals(emptyEmailField.actualText(), emptyEmailField.expectedText());
         softAssert.assertAll();
 
     }
@@ -76,7 +76,7 @@ public class LoginFunctionalityTest {
         wrongPassword.clickOnAccessButton();
         Thread.sleep(2000);
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(wrongPassword.actualTitle(), wrongPassword.expectedTitle());
+        softAssert.assertEquals(wrongPassword.actualText(), wrongPassword.expectedText());
         softAssert.assertAll();
     }
 
@@ -88,26 +88,53 @@ public class LoginFunctionalityTest {
         emptyPasswordFactory.removePassword();
         emptyPasswordFactory.clickOnTheAccessButton();
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(emptyPasswordFactory.actualTitle(), emptyPasswordFactory.expectedTitle());
+        softAssert.assertEquals(emptyPasswordFactory.actualText(), emptyPasswordFactory.expectedText());
         softAssert.assertAll();
-
     }
 
     @Test(priority = 6)
-    public void ResetPasswordPage(){
-        ResetPasswordPage resetPasswordPage = new
-                ResetPasswordPage(DriverFactory.getDriver());
+    public void MoveToTheResetPasswordPage() throws InterruptedException {
+        MoveToThePasswordResetPage resetPasswordPage = new
+                MoveToThePasswordResetPage(DriverFactory.getDriver());
         resetPasswordPage.clickOnTheResetPasswordField();
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(resetPasswordPage.isTrue());
         softAssert.assertAll();
-
-
+        Thread.sleep(3000);
 
     }
 
+    @Test(priority = 7)
+    public void ResetPasswordEmptyPhoneNumberField(){
+        ResetPassword resetPassword = new ResetPassword(DriverFactory.getDriver());
+        resetPassword.clickOnTheSendToCodeButton();
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(resetPassword.actualText(), resetPassword.expectedText());
+        softAssert.assertAll();
+    }
 
+    @Test(priority = 8)
+    public void ResetPasswordByWrongPhoneNumber(){
+        ResetPassword resetPassword = new ResetPassword(DriverFactory.getDriver());
+        resetPassword.clickOnThePhoneField();
+        resetPassword.sendPhoneNumber();
+        resetPassword.clickOnTheSendToCodeButton();
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(resetPassword.actualTextOne(), resetPassword.expectedTitleOne());
+        softAssert.assertAll();
+    }
 
+    @Test(priority = 10)
+    public void ResetPasswordByWrongEmailField() {
+        ResetPassword resetPassword = new ResetPassword(DriverFactory.getDriver());
+        resetPassword.clickOnTheCheckBoxButtonOne();
+        resetPassword.clickOnTheEmailField();
+        resetPassword.sendWrongEmail();
+        resetPassword.clickOnTheSendToCodeButton();
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(resetPassword.actualTextTree(), resetPassword.expectedTextTree());
+        softAssert.assertAll();
+    }
 }
 
 

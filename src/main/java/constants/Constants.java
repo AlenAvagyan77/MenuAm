@@ -2,10 +2,14 @@ package constants;
 
 public class Constants {
     public static final String HOME_PAGE_URL = "https://menu.am";
-    public static final String HOME_PAGE_EXPECTED_TITLE = "Պատվիրել Շուրջօրյա Սննդի Առաքում Ռեստորաններից - Menu.am";
-    public static final String FIRST_TITLE = "Ձեր էլ հասցեն կամ գաղտնաբառը սխալ է";
-    public static final String SECOND_TITLE = "Էլ. հասցե-ն պարտադիր դաշտ է";
+    public static final String HOME_PAGE_EXPECTED_TEXT= "Պատվիրել Շուրջօրյա Սննդի Առաքում Ռեստորաններից - Menu.am";
+    public static final String FIRST_TEXT = "Ձեր էլ հասցեն կամ գաղտնաբառը սխալ է";
+    public static final String SECOND_TEXT = "Էլ. հասցե-ն պարտադիր դաշտ է";
     public static final String THIRD_TEXT = "Գաղտնաբառը պարտադիր է";
+    public static final String FOURTH_TEXT = "Հեռախոսահամարը պարտադիր դաշտ է";
+    public static final String FIFTH_TEXT = "Սխալ հեռախոսահամար";
+    public static final String SIXTH_TEXT = "Մուտքագրված էլփոստի հասցեն անվավեր է";
+
 
     //    Locators
     public static final String PHONE_BUTTON = "green-bg";
@@ -54,6 +58,13 @@ public class Constants {
     public static final String ADD_TO_CART_BUTTON_3 = "//*[@id=\"mg-root\"]/div/div[2]/div/div/div[2]/div/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/div[2]";
     public static final String FIRST_TEXT_FROM_LOGIN_PAGE = "//div[@id='__next']/div/div/div[1]/div[2]/div[2]/div[2]";
     public static final String ACCESS_BUTTON = "//div[@id=\"__next\"]/div/div/div[1]/div[2]/div[2]/form/div[4]/button/span[1]";
-    public static final String RESET_PASSWORD = "//div[@class=\"MuiBox-root jss44\"]/a";
+    public static final String RESET_PASSWORD = "//a[text() = \"Մոռացե՞լ եք գաղտնաբառը\"]";
+    public static final String SEND_CODE = "//span[text() = \"Ուղարկել հաստատման կոդը\"]";
     public static final String CHECKBOX_ONE = "//span[text() = \"Վերականգնել գաղտնաբառը էլփոստով\"]";
+    public static final String FIRST_TEXT_FROM_RESET_PAGE = "//p[text() = \"Հեռախոսահամարը պարտադիր դաշտ է\"]";
+    public static final String PHONE_FIELD = "//div[@id=\"__next\"]/div/div/div/div/div[4]/div/input";
+    public static final String SECOND_TEXT_FROM_RESET_PAGE = "//p[text() = \"Սխալ հեռախոսահամար\"]";
+    public static final String THIRD_TEXT_FROM_RESET_PAGE = "//p[text() = \"Էլ. հասցե-ն պարտադիր դաշտ է\"]";
+    public static final String EMAIL_FIELD_ONE = "//div[@id=\"__next\"]/div/div/div/div/div[3]/div/input";
+    public static final String FIFTH_TEXT_FROM_RESET_PAGE = "//p[text() = \"Մուտքագրված էլփոստի հասցեն անվավեր է\"]";
 }

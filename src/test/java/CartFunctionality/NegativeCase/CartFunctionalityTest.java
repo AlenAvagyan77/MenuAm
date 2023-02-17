@@ -35,7 +35,7 @@ public class CartFunctionalityTest{
         HomePageFactory homePageFactory = new HomePageFactory(DriverFactory.getDriver());
         homePageFactory.openHomePage();
         homePageFactory.verifyTheUserIsInCorrectPage();
-        Assert.assertEquals(homePageFactory.actualTitle(), homePageFactory.expectedTitle());
+        Assert.assertEquals(homePageFactory.actualText(), homePageFactory.expectedText());
         LOGGER.info(Messages.OPENED_THE_CORRECT_MENU_AM_PAGE);
         SignInPageFactory page_1_signIn = new SignInPageFactory(DriverFactory.getDriver());
         page_1_signIn.clickOnTheRegisterButton();

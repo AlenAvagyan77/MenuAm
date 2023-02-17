@@ -42,12 +42,12 @@ public class EmptyPasswordFactory extends BasePage {
     }
 
 
-    public String actualTitle(){
+    public String actualText(){
         Helper.waitUntilElementIsDisplayed(driver, firstText, 5);
         return firstText.getText();
     }
 
-    public String expectedTitle(){
+    public String expectedText(){
         return THIRD_TEXT;
     }
 

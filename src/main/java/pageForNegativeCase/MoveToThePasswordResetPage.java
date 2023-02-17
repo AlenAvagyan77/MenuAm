@@ -9,15 +9,15 @@ import utils.Helper;
 import static constants.Constants.CHECKBOX_ONE;
 import static constants.Constants.RESET_PASSWORD;
 
-public class ResetPasswordPage extends BasePage {
-    public ResetPasswordPage(WebDriver driver) {
+public class MoveToThePasswordResetPage extends BasePage {
+    public MoveToThePasswordResetPage(WebDriver driver) {
         super(driver);
     }
 
     @FindBy(xpath = RESET_PASSWORD)
     protected WebElement resetPasswordField;
     @FindBy(xpath = CHECKBOX_ONE)
-    protected WebElement checkboxOne;
+    protected WebElement checkboxOneButton;
 
 
 
@@ -27,7 +27,7 @@ public class ResetPasswordPage extends BasePage {
     }
 
     public boolean isTrue(){
-        if (checkboxOne.isDisplayed()){
+        if (checkboxOneButton.isDisplayed()){
             return true;
         }else {
             return false;
