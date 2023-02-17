@@ -1,6 +1,5 @@
 package pageFactories;
 
-import org.apache.commons.compress.archivers.zip.X000A_NTFS;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -56,10 +55,10 @@ public class OrderAnInappropriateProductPageFactory extends BasePage {
 
     public void deleteAllProducts() {
         try {
-            Helper.waitUntilElementIsDisplayed(driver, deleteItemButton, 5);
+            Helper.waitUntilElementIsDisplayed(driver, deleteItemButton, 2);
             if (deleteItemButton.isDisplayed()) {
                 deleteItemButton.click();
-                Helper.waitUntilElementIsDisplayed(driver, emptyButton, 5);
+                Helper.waitUntilElementIsDisplayed(driver, emptyButton, 3);
                 emptyButton.click();
             }
         } catch (Exception e) {

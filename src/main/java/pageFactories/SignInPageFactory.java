@@ -4,6 +4,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utils.Helper;
 
 import java.util.logging.Logger;
 
@@ -17,7 +18,7 @@ public class SignInPageFactory extends BasePage {
         super(driver);
     }
 
-    @FindBy(id = PHONE_BUTTON)
+    @FindBy(xpath = PHONE_BUTTON)
     protected WebElement phoneButton;
     @FindBy(className = REGISTER_BUTTON)
     protected WebElement registerButton;
@@ -36,6 +37,7 @@ public class SignInPageFactory extends BasePage {
         phoneButton.click();
     }
     public void clickOnTheEmailFieldAndEnterEmail(String enterEmail){
+        Helper.waitUntilElementIsDisplayed(driver, emailField, 5);
         emailField.click();
         emailField.sendKeys(enterEmail);
     }
@@ -47,6 +49,7 @@ public class SignInPageFactory extends BasePage {
     }
 
     public boolean isTrue(){
+        Helper.waitUntilElementIsDisplayed(driver, searchField, 5);
         if (searchField.isDisplayed()){
             return true;
         }else {

@@ -31,7 +31,7 @@ public class CartFunctionalityTest{
     }
 
     @Test(priority = 1)
-    public void SignInForMenuAm() {
+    public void SignInForMenuAm() throws InterruptedException {
         HomePageFactory homePageFactory = new HomePageFactory(DriverFactory.getDriver());
         homePageFactory.openHomePage();
         homePageFactory.verifyTheUserIsInCorrectPage();
@@ -40,7 +40,7 @@ public class CartFunctionalityTest{
         SignInPageFactory page_1_signIn = new SignInPageFactory(DriverFactory.getDriver());
         page_1_signIn.clickOnTheRegisterButton();
         page_1_signIn.clickOnThePhoneButton();
-        page_1_signIn.clickOnTheEmailFieldAndEnterEmail(Data.VALID_EMAIL);
+        page_1_signIn.clickOnTheEmailFieldAndEnterEmail(Data.VALID_PHONE_NUMBER);
         page_1_signIn.clickOnThePasswordFieldAndEnterPassword(Data.VALID_PASSWORD);
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(page_1_signIn.isTrue());

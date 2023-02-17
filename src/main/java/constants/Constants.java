@@ -12,7 +12,7 @@ public class Constants {
 
 
     //    Locators
-    public static final String PHONE_BUTTON = "green-bg";
+    public static final String PHONE_BUTTON = "/html/body/div[1]/div/div/div[1]/div[2]/div[2]/form/div[1]/div[2]/div";
     public static final String EMAIL_FIELD = "//div[@id=\"__next\"]/div/div/div[1]/div[2]/div[2]/form/div[1]/div[2]/input";
     public static final String PASSWORD_FIELD = "//input[@type='password']";
     public static final String REGISTER_BUTTON = "MuiButton-label";
@@ -21,17 +21,17 @@ public class Constants {
     public static final String MY_ADDRESS_BUTTON = "//span[text() = 'Կոմիտասի պողոտա, 60/2']";
     public static final String RESTAURANT_FOR_ORDER_BUTTON = "//h2[text() = \"Փարաքարի շաուրմա և Թուրինգյան բրաթվուրստ\"]";
     public static final String BASKET_BUTTON = "//div[@data-id=\"basket\"]";
-    public static final String ADD_TO_CART_BUTTON = "//div[@id=\"mg-root\"]/div/div[2]/div/div/div[2]/div/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/div[2]";
+    public static final String ADD_TO_CART_BUTTON = "//*[@id=\"__next\"]/div/div/div[2]/div/div/div[2]/div/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/div[2]";
     public static final String LIST_OF_ITEM = "//span[@data-id=\"amount\"]";
     public static final String ADD_TO_SHOPPING_CART_BUTTON = "//span[text() = 'Ավելացնել զամբյուղ']";
-    public static final String BASKET_INDEX = "//div[@id=\"mg-root\"]/header/div[1]/div/div[3]/div/div[2]/div[1]/button/span[1]/span/span";
+    public static final String BASKET_INDEX = "//*[@id=\"__next\"]/div/header/div[1]/div/div[3]/div/div[2]/div[1]/button/span[1]/span/span";
     public static final String TO_ORDER_NOW_BUTTON = "//span[text() = 'Պատվիրել հիմա']";
     public static final String MUST_GET_THIS_MESSAGE = "//div[@class=\"MuiDialogContent-root\"]";
     public static final String CONFIRM_BUTTON = "//span[text() = 'Հաստատել']";
     public static final String DELETE_ALL_PRODUCTS_BUTTON = "//a[text() = 'Ջնջել բոլորը']";
     public static final String EMPTY_BUTTON = "//span[text() = 'Դատարկել']";
     public static final String DELETE_ITEM_BUTTON = "//div[@id=\"content\"]/div/div[1]/a";
-    public static final String HOME_PAGE_BUTTON = "//div[@id=\"mg-root\"]/header/div/div/div/div/h1/a";
+    public static final String HOME_PAGE_BUTTON = "//div[@id=\"__next\"]/div/header/div[1]/div/div[1]/div/h1/a";
     public static final String FIRST_PRODUCT_BUTTON = "//h2[text() = 'ՊաՊա Պիցցա']";
     public static final String GET_TEXT_OF_ORDER = "//div[@id=\"mg-root\"]/div/div[2]/div/div/div[2]/div/div/div[1]/div[2]/div[1]/div/div[2]/div[1]/h3";
     public static final String ADD_TO_CART_BUTTON_1 = "//div[@id=\"mg-root\"]/div/div[2]/div/div/div[2]/div/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/div[2]";

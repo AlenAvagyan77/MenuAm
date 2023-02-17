@@ -1,6 +1,5 @@
 package pageForNegativeCase;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,6 +26,8 @@ public class WrongEmailFactory extends BasePage {
     protected WebElement searchField;
     @FindBy(xpath = FIRST_TEXT_FROM_LOGIN_PAGE)
     protected WebElement firstText;
+    @FindBy(xpath = ACCESS_BUTTON)
+    protected WebElement accessButton;
 
 
     public void clickOnTheRegisterButton() {
@@ -34,17 +35,26 @@ public class WrongEmailFactory extends BasePage {
         registerButton.click();
     }
 
-    public void clickOnTheEmailFieldAndEnterEmail(String enterEmail){
+    public void clickOnTheEmailField(){
         Helper.waitUntilElementIsDisplayed(driver, emailField, 5);
         emailField.click();
+    }
+    public void sendEmail(String enterEmail){
         emailField.sendKeys(enterEmail);
     }
 
     public void clickOnThePasswordFieldAndEnterPassword(String password) {
         Helper.waitUntilElementIsDisplayed(driver, passwordField, 5);
         passwordField.click();
-        passwordField.sendKeys(password, Keys.ENTER);
+        passwordField.sendKeys(password);
+
     }
+
+    public void clickOnTheAccessButton(){
+        Helper.waitUntilElementIsDisplayed(driver, accessButton, 5);
+        accessButton.click();
+    }
+
     public String actualText(){
         Helper.waitUntilElementIsDisplayed(driver, firstText, 5);
         return firstText.getText();
