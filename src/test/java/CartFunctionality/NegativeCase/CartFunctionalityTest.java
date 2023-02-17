@@ -31,7 +31,7 @@ public class CartFunctionalityTest{
         BaseTest.tearDown(DriverFactory.getDriver());
     }
 
-    @Test(priority = 1, groups = {"1"})
+    @Test(priority = 1, groups = {"General"})
     public void SignInForMenuAm() throws InterruptedException {
         HomePageFactory homePageFactory = new HomePageFactory(DriverFactory.getDriver());
         homePageFactory.openHomePage();

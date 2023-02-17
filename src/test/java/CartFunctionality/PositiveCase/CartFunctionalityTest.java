@@ -15,17 +15,17 @@ import java.util.logging.Logger;
 public class CartFunctionalityTest {
     private static final Logger LOGGER = Logger.getLogger(CartFunctionalityTest.class.getName());
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void initDriver() {
         BaseTest.initDriver();
     }
 
-    @AfterTest
+    @AfterTest(alwaysRun = true)
     public void tearDown() {
         BaseTest.tearDown(DriverFactory.getDriver());
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = {"positive"})
     public void SignInForMenuAm() {
         HomePageFactory homePageFactory = new HomePageFactory(DriverFactory.getDriver());
         homePageFactory.openHomePage();
@@ -41,7 +41,7 @@ public class CartFunctionalityTest {
         softAssert.assertAll();
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = {"positive"})
     public void SearchFunctionality() {
         SearchProductPageFactory searchProductPageFactory = new SearchProductPageFactory(DriverFactory.getDriver());
         LOGGER.info(Messages.TEST_ONE);
@@ -53,7 +53,7 @@ public class CartFunctionalityTest {
         softAssert.assertAll();
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3, groups = {"positive"})
     public void AddAnyProductToShoppingCart() throws InterruptedException {
         AddAnyProductToSoppingCartFactory addAnyProductToSoppingCart = new AddAnyProductToSoppingCartFactory(
                 DriverFactory.getDriver());
@@ -70,7 +70,7 @@ public class CartFunctionalityTest {
         softAssert.assertAll();
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4, groups = {"positive"})
     public void ProductQuantityIncreasesWhenAddingProduct() throws InterruptedException {
         ProductQuantityFactory productQuantity = new ProductQuantityFactory(DriverFactory.getDriver());
         productQuantity.clickOnTheHomePageButton();
@@ -87,7 +87,7 @@ public class CartFunctionalityTest {
         softAssert.assertAll();
     }
 
-    @Test(priority = 5)
+    @Test(priority = 5, groups = {"positive"})
     public void DecreasedOneProductFromCart() throws InterruptedException {
         DecreasedOneProductFromTheCartFactory decreasedOneProductFromTheCart = new DecreasedOneProductFromTheCartFactory(
                 DriverFactory.getDriver());
@@ -106,7 +106,7 @@ public class CartFunctionalityTest {
         softAssert.assertAll();
     }
 
-    @Test(priority = 6)
+    @Test(priority = 6, groups = {"positive"})
     public void TotalPriceOfOrder() throws InterruptedException {
         TotalPriceOfOrderFactory totalPriceOfOrder =
                 new TotalPriceOfOrderFactory(DriverFactory.getDriver());
@@ -130,7 +130,7 @@ public class CartFunctionalityTest {
 
     }
 
-    @Test(priority = 7)
+    @Test(priority = 7, groups = {"positive"})
     public void RemoveAllProductFromCart() throws InterruptedException {
         RemoveAllProductFromTheCartFactory removeAllProductFromTheCart =
                 new RemoveAllProductFromTheCartFactory(DriverFactory.getDriver());
