@@ -17,16 +17,16 @@ import pageFactories.SignInPageFactory;
 import java.util.logging.Logger;
 
 
-public class CartFunctionality{
+public class CartFunctionalityTest{
     private static final Logger LOGGER = Logger.getLogger(CartFunctionality.PositiveCase.CartFunctionalityTest.class.getName());
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void initDriver() {
         BaseTest.initDriver();
     }
 
 
-    @AfterTest
+    @AfterTest(alwaysRun = true)
     public void tearDown() {
         BaseTest.tearDown(DriverFactory.getDriver());
     }

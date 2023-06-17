@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: CartFunctionality.NegativeCase.CartFunctionalityOne
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 6, Time elapsed: 1.222 sec <<< FAILURE!
+initDriver(CartFunctionality.NegativeCase.CartFunctionalityOne)  Time elapsed: 1.092 sec  <<< FAILURE!
+java.lang.NoSuchMethodError: 'com.google.common.collect.ImmutableMap com.google.common.collect.ImmutableMap.of(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)'
+	at org.openqa.selenium.chrome.AddHasCasting.getAdditionalCommands(AddHasCasting.java:38)
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.getExtraCommands(ChromeDriver.java:116)
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:111)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:101)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:52)
+	at driver.DriverFactory.initDriver(DriverFactory.java:17)
+	at CartFunctionality.BaseTest.initDriver(BaseTest.java:10)
+	at CartFunctionality.NegativeCase.CartFunctionalityOne.initDriver(CartFunctionalityOne.java:25)
+

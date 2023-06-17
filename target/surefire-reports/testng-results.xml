@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-06-17T21:23:43 AMT" name="Command line suite" finished-at="2023-06-17T21:24:17 AMT" duration-ms="33410">
+    <groups>
+      <group name="negative">
+        <method signature="LoginFunctionalityTest.OpenMenuAm()[pri:1, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" name="OpenMenuAm" class="LoginFunctionality.NegativeCase.LoginFunctionalityTest"/>
+        <method signature="LoginFunctionalityTest.WrongEmailCase()[pri:2, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" name="WrongEmailCase" class="LoginFunctionality.NegativeCase.LoginFunctionalityTest"/>
+        <method signature="LoginFunctionalityTest.EmptyEmailFieldCase()[pri:3, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" name="EmptyEmailFieldCase" class="LoginFunctionality.NegativeCase.LoginFunctionalityTest"/>
+        <method signature="LoginFunctionalityTest.WrongPasswordCase()[pri:4, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" name="WrongPasswordCase" class="LoginFunctionality.NegativeCase.LoginFunctionalityTest"/>
+        <method signature="LoginFunctionalityTest.EmptyPasswordCase()[pri:5, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" name="EmptyPasswordCase" class="LoginFunctionality.NegativeCase.LoginFunctionalityTest"/>
+        <method signature="LoginFunctionalityTest.MoveToTheResetPasswordPage()[pri:6, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" name="MoveToTheResetPasswordPage" class="LoginFunctionality.NegativeCase.LoginFunctionalityTest"/>
+        <method signature="LoginFunctionalityTest.ResetPasswordEmptyPhoneNumberField()[pri:7, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" name="ResetPasswordEmptyPhoneNumberField" class="LoginFunctionality.NegativeCase.LoginFunctionalityTest"/>
+        <method signature="LoginFunctionalityTest.ResetPasswordByWrongPhoneNumber()[pri:8, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" name="ResetPasswordByWrongPhoneNumber" class="LoginFunctionality.NegativeCase.LoginFunctionalityTest"/>
+        <method signature="LoginFunctionalityTest.ResetPasswordByWrongEmailField()[pri:10, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" name="ResetPasswordByWrongEmailField" class="LoginFunctionality.NegativeCase.LoginFunctionalityTest"/>
+      </group> <!-- negative -->
+    </groups>
+    <test started-at="2023-06-17T21:23:43 AMT" name="Command line test" finished-at="2023-06-17T21:24:17 AMT" duration-ms="33410">
+      <class name="LoginFunctionality.NegativeCase.LoginFunctionalityTest">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" started-at="2023-06-17T21:23:44 AMT" name="initDriver" finished-at="2023-06-17T21:23:46 AMT" duration-ms="2250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="OpenMenuAm()[pri:1, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" started-at="2023-06-17T21:23:46 AMT" name="OpenMenuAm" finished-at="2023-06-17T21:24:00 AMT" duration-ms="14392" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenMenuAm -->
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" started-at="2023-06-17T21:24:00 AMT" name="initDriver" finished-at="2023-06-17T21:24:00 AMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="WrongEmailCase()[pri:2, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" started-at="2023-06-17T21:24:00 AMT" name="WrongEmailCase" finished-at="2023-06-17T21:24:05 AMT" duration-ms="4265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WrongEmailCase -->
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" started-at="2023-06-17T21:24:05 AMT" name="initDriver" finished-at="2023-06-17T21:24:05 AMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="EmptyEmailFieldCase()[pri:3, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" started-at="2023-06-17T21:24:05 AMT" name="EmptyEmailFieldCase" finished-at="2023-06-17T21:24:07 AMT" duration-ms="2504" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmptyEmailFieldCase -->
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" started-at="2023-06-17T21:24:07 AMT" name="initDriver" finished-at="2023-06-17T21:24:07 AMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="WrongPasswordCase()[pri:4, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" started-at="2023-06-17T21:24:07 AMT" name="WrongPasswordCase" finished-at="2023-06-17T21:24:10 AMT" duration-ms="2962" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WrongPasswordCase -->
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" started-at="2023-06-17T21:24:10 AMT" name="initDriver" finished-at="2023-06-17T21:24:10 AMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="EmptyPasswordCase()[pri:5, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" started-at="2023-06-17T21:24:10 AMT" name="EmptyPasswordCase" finished-at="2023-06-17T21:24:10 AMT" duration-ms="429" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmptyPasswordCase -->
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" started-at="2023-06-17T21:24:10 AMT" name="initDriver" finished-at="2023-06-17T21:24:10 AMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="MoveToTheResetPasswordPage()[pri:6, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" started-at="2023-06-17T21:24:10 AMT" name="MoveToTheResetPasswordPage" finished-at="2023-06-17T21:24:15 AMT" duration-ms="4597" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MoveToTheResetPasswordPage -->
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" started-at="2023-06-17T21:24:15 AMT" name="initDriver" finished-at="2023-06-17T21:24:15 AMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="ResetPasswordEmptyPhoneNumberField()[pri:7, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" started-at="2023-06-17T21:24:15 AMT" name="ResetPasswordEmptyPhoneNumberField" finished-at="2023-06-17T21:24:16 AMT" duration-ms="720" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ResetPasswordEmptyPhoneNumberField -->
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" started-at="2023-06-17T21:24:16 AMT" name="initDriver" finished-at="2023-06-17T21:24:16 AMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="ResetPasswordByWrongPhoneNumber()[pri:8, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" started-at="2023-06-17T21:24:16 AMT" name="ResetPasswordByWrongPhoneNumber" finished-at="2023-06-17T21:24:16 AMT" duration-ms="482" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ResetPasswordByWrongPhoneNumber -->
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" started-at="2023-06-17T21:24:16 AMT" name="initDriver" finished-at="2023-06-17T21:24:16 AMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="ResetPasswordByWrongEmailField()[pri:10, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" started-at="2023-06-17T21:24:16 AMT" name="ResetPasswordByWrongEmailField" finished-at="2023-06-17T21:24:17 AMT" duration-ms="484" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ResetPasswordByWrongEmailField -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:LoginFunctionality.NegativeCase.LoginFunctionalityTest@10d68fcd]" started-at="2023-06-17T21:24:17 AMT" name="tearDown" finished-at="2023-06-17T21:24:17 AMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- LoginFunctionality.NegativeCase.LoginFunctionalityTest -->
+      <class name="CartFunctionality.PositiveCase.CartFunctionalityTest">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartFunctionality.PositiveCase.CartFunctionalityTest@58ea606c]" started-at="2023-06-17T21:24:17 AMT" name="tearDown" finished-at="2023-06-17T21:24:17 AMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- CartFunctionality.PositiveCase.CartFunctionalityTest -->
+      <class name="CartFunctionality.NegativeCase.CartFunctionalityTest">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartFunctionality.NegativeCase.CartFunctionalityTest@424e1977]" started-at="2023-06-17T21:24:17 AMT" name="tearDown" finished-at="2023-06-17T21:24:17 AMT" duration-ms="115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- CartFunctionality.NegativeCase.CartFunctionalityTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
